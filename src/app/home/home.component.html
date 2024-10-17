@@ -1,0 +1,29 @@
+<!--<h1 [class.darkpurple]="myh1">Home Page</h1>-->
+
+
+<!--
+<h1 [ngClass]="{
+  'darkpurple' : myh1,
+  'bigfont': !myh1
+}">
+  Home Page
+</h1>
+-->
+
+<h1 [style.color]="myh1 ? 'red' : 'black'">Home Page</h1>
+
+<!--
+<h1 [ngStyle]="{
+  'color': myh1 ? 'red' : 'black',
+  'font-style': !myh1 ? 'normal' : 'italic'
+}" >Home Page</h1>
+-->
+<ul *ngIf="members">
+  <li *ngFor="let member of members.data">
+    <img src="{{ member.avatar }}" alt="face image of {{member.first_name}}">
+    <p>{{member.last_name }}, {{ member.first_name}}</p>
+  </li>
+</ul>
+
+
+<button (click)="justClick()">Click here</button>
